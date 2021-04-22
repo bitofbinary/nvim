@@ -41,3 +41,6 @@ map('n', '<leader>bp', ':BufferLineCyclePrev<cr>', {})
 map('n', '<leader>e', ':NvimTreeToggle<cr>', {})
 map('n', '<leader>er', ':NvimTreeRefresh<cr> :NvimTreeFindFile<cr>', {})
 
+-- voldikss/vim-floaterm
+map('n', '<leader>t', ':FloatermNew<cr>', {})
+
