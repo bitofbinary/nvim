@@ -173,3 +173,6 @@ for _, lsp in ipairs(servers) do
         on_attach = on_attach
     }
 end
+
+-- neoformat
+vim.cmd('autocmd BufWritePre *.* Neoformat')

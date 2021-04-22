@@ -47,5 +47,7 @@ return require('packer').startup(function()
 
     use {'voldikss/vim-floaterm'}
 
+    use {'sbdchd/neoformat'}
+
 end)
 
