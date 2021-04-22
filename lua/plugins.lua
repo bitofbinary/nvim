@@ -49,5 +49,7 @@ return require('packer').startup(function()
 
     use {'sbdchd/neoformat'}
 
+    use {'jiangmiao/auto-pairs'}
+
 end)
 
