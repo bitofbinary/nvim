@@ -11,6 +11,10 @@ return require('packer').startup(function()
     use {'miyakogi/conoline.vim'}
     use {'christianchiarulli/nvcode-color-schemes.vim'}
     use {'sainnhe/edge'}
+    use {
+        'kaicataldo/material.vim',
+        branch = 'main'
+    }
 
     use {
         'nvim-telescope/telescope.nvim',

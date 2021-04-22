@@ -2,6 +2,8 @@ vim.cmd('set t_Co=256')
 vim.cmd('set termguicolors')
 vim.cmd('hi Comment cterm=italic')
 vim.cmd('let $NVIM_TUI_ENABLE_TRUE_COLOR = 1')
+-- vim.cmd('let g:material_theme_style = "darker"')
+-- vim.cmd('let g:material_theme_style = "darker"')
 vim.cmd('colorscheme edge')
 
 require('lualine').setup {
