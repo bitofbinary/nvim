@@ -12,6 +12,7 @@ return require('packer').startup(function()
         branch = 'main'
     }
     use 'folke/tokyonight.nvim'
+        use 'RRethy/nvim-base16'
 
 
     use {

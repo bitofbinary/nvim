@@ -7,8 +7,10 @@ vim.cmd('let $NVIM_TUI_ENABLE_TRUE_COLOR = 1')
 vim.cmd('colorscheme edge')
 
 
-vim.g.tokyonight_style = "night"
-vim.cmd('colorscheme tokyonight')
+-- vim.g.tokyonight_style = "night"
+-- vim.cmd('colorscheme tokyonight')
+--
+-- vim.cmd('colorscheme onedark')
 
 require('lualine').setup {
     options = {
