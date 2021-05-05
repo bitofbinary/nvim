@@ -6,9 +6,13 @@ vim.cmd('let $NVIM_TUI_ENABLE_TRUE_COLOR = 1')
 -- vim.cmd('let g:material_theme_style = "darker"')
 vim.cmd('colorscheme edge')
 
+
+vim.g.tokyonight_style = "night"
+vim.cmd('colorscheme tokyonight')
+
 require('lualine').setup {
     options = {
-        theme = 'ayu_dark',
+        theme = 'tokyonight',
         icons_enabled = true
     },
     sections = {
@@ -41,7 +45,7 @@ require('lualine').setup {
     }
 }
 
-require'bufferline'.setup {
+--[[ require'bufferline'.setup {
     options = {
         view = "default",
         buffer_close_icon = '',
@@ -63,5 +67,5 @@ require'bufferline'.setup {
             return " " .. icon .. count
         end
     }
-}
+} ]]
 

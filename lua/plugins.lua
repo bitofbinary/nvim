@@ -4,10 +4,6 @@ return require('packer').startup(function()
 
     use {'kyazdani42/nvim-web-devicons'}
     use {'hoob3rt/lualine.nvim'}
-    use {
-        'akinsho/nvim-bufferline.lua',
-        requires = 'kyazdani42/nvim-web-devicons'
-    }
     use {'miyakogi/conoline.vim'}
     use {'christianchiarulli/nvcode-color-schemes.vim'}
     use {'sainnhe/edge'}
@@ -15,6 +11,8 @@ return require('packer').startup(function()
         'kaicataldo/material.vim',
         branch = 'main'
     }
+    use 'folke/tokyonight.nvim'
+
 
     use {
         'nvim-telescope/telescope.nvim',
@@ -53,7 +51,17 @@ return require('packer').startup(function()
 
     use {'b3nj5m1n/kommentary'  }
 
-
+         use {
+          "folke/lsp-trouble.nvim",
+          requires = "kyazdani42/nvim-web-devicons",
+          config = function()
+            require("trouble").setup {
+              -- your configuration comes here
+              -- or leave it empty to use the default settings
+              -- refer to the configuration section below
+            }
+          end
+        } 
 
 end)
 
