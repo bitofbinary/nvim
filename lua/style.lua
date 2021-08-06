@@ -4,15 +4,25 @@ vim.cmd('hi Comment cterm=italic')
 vim.cmd('let $NVIM_TUI_ENABLE_TRUE_COLOR = 1')
 -- vim.cmd('let g:material_theme_style = "darker"')
 -- vim.cmd('let g:material_theme_style = "darker"')
-vim.cmd('colorscheme edge')
-
-
+-- vim.cmd('colorscheme edge')
+-- vim.cmd('colorscheme nord')
 -- vim.g.tokyonight_style = "night"
--- vim.cmd('colorscheme tokyonight')
+ -- vim.cmd('colorscheme tokyonight')
 --
 -- vim.cmd('colorscheme onedark')
+--[[ vim.g.nord_contrast = true
+vim.g.nord_borders = true
+vim.g.nord_disable_background = true ]]
+
+require('nord').set()
 
 require('lualine').setup {
+        options = {
+                theme = 'nord'
+        }
+}
+
+--[[ require('lualine').setup {
     options = {
         theme = 'tokyonight',
         icons_enabled = true
@@ -45,7 +55,7 @@ require('lualine').setup {
         lualine_y = {},
         lualine_z = {}
     }
-}
+} ]]
 
 --[[ require'bufferline'.setup {
     options = {

@@ -14,7 +14,9 @@ return require('packer').startup(function()
     use 'folke/tokyonight.nvim'
         use 'RRethy/nvim-base16'
 
-
+    use 'phanviet/vim-monokai-pro'
+    use 'shaunsingh/nord.nvim' 
+ 
     use {
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
@@ -23,10 +25,10 @@ return require('packer').startup(function()
     use {'neovim/nvim-lspconfig'}
     use {'hrsh7th/nvim-compe'}
 
-    use {
+    --[[ use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
-    }
+    } ]]
 
     use {'kyazdani42/nvim-tree.lua'}
 
@@ -52,7 +54,7 @@ return require('packer').startup(function()
 
     use {'b3nj5m1n/kommentary'  }
 
-         use {
+         --[[ use {
           "folke/lsp-trouble.nvim",
           requires = "kyazdani42/nvim-web-devicons",
           config = function()
@@ -62,7 +64,12 @@ return require('packer').startup(function()
               -- refer to the configuration section below
             }
           end
-        } 
+        }  ]]
+    use { 'folke/trouble.nvim' }
+
+    use { "folke/todo-comments.nvim" }
+
+    -- use {'prettier/vim-prettier', run = 'yarn install'}
 
 end)
 
