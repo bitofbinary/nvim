@@ -13,7 +13,11 @@ vim.cmd('set hidden')
 vim.cmd('set expandtab')
 
 -- Change number of spaces that a <Tab> counts for during editing ops
+vim.cmd('set tabstop=2')
+vim.cmd('set shiftwidth=2')
 vim.cmd('set softtabstop=2')
+vim.cmd('set smartindent')
+
 
 -- Don't highlight current cursor line
 vim.cmd('set nocursorline')
@@ -176,3 +180,22 @@ end
 
 -- neoformat
 vim.cmd('autocmd BufWritePre *.* Neoformat')
+
+-- set html bindings for ejs files
+vim.cmd('au BufNewFile,BufRead *.ejs set filetype=html')
+
+
+
+require'lspconfig'.solargraph.setup {}
+
+-- Use a loop to conveniently call 'setup' on multiple servers and
+-- map buffer local keybindings when the language server attaches
+local servers = { "solargraph" }
+for _, lsp in ipairs(servers) do
+  nvim_lsp[lsp].setup {
+	on_attach = on_attach,
+	flags = {
+	  debounce_text_changes = 150,
+	}
+  }
+end

@@ -7,14 +7,6 @@ return require('packer').startup(function()
     use {'miyakogi/conoline.vim'}
     use {'christianchiarulli/nvcode-color-schemes.vim'}
     use {'sainnhe/edge'}
-    use {
-        'kaicataldo/material.vim',
-        branch = 'main'
-    }
-    use 'folke/tokyonight.nvim'
-        use 'RRethy/nvim-base16'
-
-    use 'phanviet/vim-monokai-pro'
     use 'shaunsingh/nord.nvim' 
  
     use {
@@ -23,6 +15,7 @@ return require('packer').startup(function()
     }
 
     use {'neovim/nvim-lspconfig'}
+    use {'/jose-elias-alvarez/nvim-lsp-ts-utils'}
     use {'hrsh7th/nvim-compe'}
 
     --[[ use {
@@ -69,7 +62,11 @@ return require('packer').startup(function()
 
     use { "folke/todo-comments.nvim" }
 
+    use {"ms-jpq/coq_nvim"}
+
     -- use {'prettier/vim-prettier', run = 'yarn install'}
+    use { "/tpope/vim-rails" }
+    use { "tpope/vim-endwise" }
 
 end)
 
